@@ -24,6 +24,8 @@
            <label className="relative inline-flex items-center cursor-pointer">
              <input
                type="checkbox"
+   )
+ }
 @@ -1,7 +1,7 @@
                checked={isYearly}
                onChange={toggleBilling}

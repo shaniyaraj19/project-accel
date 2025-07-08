@@ -2,6 +2,8 @@
  import React from 'react';
  export default function Contact() {
    return (
+   )
+ }
 -    <div className="space-y-16 max-w-3xl mx-auto">
 +    <div className="space-y-16 max-w-4xl mx-auto">
        {/* Header */}
