@@ -8,20 +8,22 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const navLinkClass = ({ isActive }) => 
-    `relative px-3 py-2 rounded-lg transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-green-400 hover:to-purple-400 ${
-      isActive ? 'gradient-text font-semibold' : 'text-gray-300 hover:text-white'
-    }`;
+  const navLinkClass = ({ isActive }) =>
+  `relative px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:font-medium ${
+    isActive ? 'gradient-text font-semibold' : 'text-gray-300 hover:text-white'
+  }`;
 
   return (
-    <nav className="bg-gray-900/95 backdrop-blur-md border-b border-gray-700 shadow-lg sticky top-0 z-50">
+    <nav className="bg-black/90 backdrop-blur-md border-b border-white/10 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center">
             <span className="text-white font-bold text-lg">P</span>
           </div>
-          <div className="text-xl font-bold gradient-text animate-pulse-custom">ProjectAccel</div>
+          <div className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-pulse-custom">
+            ProjectAccel
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -41,7 +43,7 @@ function Navbar() {
           <button className="text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors">
             Sign In
           </button>
-          <button className="btn-primary">
+          <button className="bg-gradient-to-r from-white to-gray-400 text-black px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform">
             Start Free Trial
           </button>
         </div>
@@ -65,7 +67,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-gray-900/98 backdrop-blur-md border-t border-gray-700">
+        <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4 py-4 space-y-2">
             <NavLink to="/" end className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Home</NavLink>
             <NavLink to="/features" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Features</NavLink>
@@ -75,11 +77,11 @@ function Navbar() {
             <NavLink to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Blog</NavLink>
             <NavLink to="/about" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>About</NavLink>
             <NavLink to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Contact</NavLink>
-            <div className="pt-4 border-t border-gray-700 space-y-2">
+            <div className="pt-4 border-t border-white/10 space-y-2">
               <button className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors">
                 Sign In
               </button>
-              <button className="block w-full btn-primary text-center">
+              <button className="block w-full bg-gradient-to-r from-white to-gray-400 text-black text-center font-semibold px-4 py-2 rounded-lg hover:scale-105 transition-transform">
                 Start Free Trial
               </button>
             </div>

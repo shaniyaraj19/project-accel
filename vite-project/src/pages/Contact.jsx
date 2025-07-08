@@ -1,10 +1,11 @@
 import React from 'react';
+
 export default function Contact() {
   return (
     <div className="space-y-16 max-w-4xl mx-auto">
       {/* Header */}
-      <section className="text-center animate-fade-in-up">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">Let's Talk</h1>
+      <section className="text-center animate-fade-in-up pt-4">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-snug bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent animate-float">Let's Talk!</h1>
         <p className="text-xl text-gray-300">
           Whether you have questions, need support, or want a demo — we’re here to help.
         </p>
@@ -51,7 +52,7 @@ export default function Contact() {
             <textarea className="w-full bg-gray-800 border border-gray-600 px-4 py-3 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors min-h-[120px]" required></textarea>
           </div>
           <div className="text-center">
-            <button className="gradient-bg text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold">
+            <button className="gradient-bg text-white px-8 py-3 rounded-lg border border-white/90 shadow-lg hover:shadow-xl transform hover:scale-105 hover:border-white hover:bg-white hover:text-black transition-all duration-300 font-semibold">
               Submit
             </button>
           </div>

@@ -53,30 +53,32 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 mt-20">
+    <footer className="bg-black border-t border-white/10 mt-20 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">P</span>
               </div>
-              <div className="text-xl font-bold gradient-text">ProjectAccel</div>
+              <div className="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                ProjectAccel
+              </div>
             </div>
-            
-            <p className="text-gray-300 mb-6 leading-relaxed">
+
+            <p className="text-gray-400 mb-6 leading-relaxed">
               Empowering teams worldwide to deliver exceptional projects with AI-powered insights, 
               seamless collaboration, and enterprise-grade security.
             </p>
-            
+
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 glass rounded-lg flex items-center justify-center hover:scale-110 transition-transform duration-300"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-lg flex items-center justify-center transition-transform transform hover:scale-110"
                   title={social.name}
                 >
                   <span className="text-lg">{social.icon}</span>
@@ -94,7 +96,7 @@ function Footer() {
                   <li key={linkIndex}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 hover:gradient-text"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
                     >
                       {link.name}
                     </a>
@@ -106,11 +108,13 @@ function Footer() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="glass p-8 rounded-xl mb-12">
+        <div className="bg-white/5 p-8 rounded-xl mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold gradient-text mb-2">Stay in the Loop</h3>
-              <p className="text-gray-300">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2">
+                Stay in the Loop
+              </h3>
+              <p className="text-gray-400">
                 Get the latest updates, tips, and insights delivered to your inbox.
               </p>
             </div>
@@ -118,9 +122,9 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors"
+                className="flex-1 px-4 py-3 bg-black border border-white/20 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white"
               />
-              <button className="btn-primary px-6 py-3 whitespace-nowrap">
+              <button className="bg-gradient-to-r from-white to-gray-400 text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-xl transition">
                 Subscribe
               </button>
             </div>
@@ -128,12 +132,12 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} ProjectAccel. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <span className="text-green-400">🔒</span>

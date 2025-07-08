@@ -52,19 +52,19 @@ export default function Features() {
   ];
 
   return (
-    <div className="space-y-20">
+    <div className="space-y-20 bg-black text-white">
       {/* Hero Section */}
-      <section className="hero-bg text-center py-20 animate-fade-in-up">
+      <section className="text-center py-12 animate-fade-in-up">
         <div className="max-w-5xl mx-auto">
-          <div className="inline-flex items-center px-4 py-2 rounded-full glass mb-6 animate-scale-in">
+          <div className="inline-flex items-center px-4 py-2 rounded-full glass mb-6 border border-white/90 animate-scale-in w-fit mx-auto">
             <span className="text-blue-400 mr-2">⚡</span>
             <span className="text-sm text-gray-300">Powered by AI and built for scale</span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold gradient-text mb-6">
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-snug bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent animate-float">
             Features That Drive Results
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the comprehensive suite of tools designed to accelerate your team's success and deliver exceptional project outcomes.
           </p>
@@ -73,20 +73,20 @@ export default function Features() {
 
       {/* Core Features */}
       <section className="animate-fade-in-up stagger-2">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Core Capabilities</h2>
+        <div className="text-center mb-16 pt-0">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-snug bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent animate-float">
+            Core Capabilities
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Everything you need to plan, execute, and deliver projects with confidence.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="pro-card p-8 hover-lift animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className="glass p-8 rounded-xl hover-lift animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-start space-x-6">
-                <div className="feature-icon animate-float text-4xl">
-                  {feature.icon}
-                </div>
+                <div className="text-4xl animate-float">{feature.icon}</div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold gradient-text mb-4">{feature.title}</h3>
                   <p className="text-gray-300 text-lg mb-6 leading-relaxed">{feature.description}</p>
@@ -107,37 +107,6 @@ export default function Features() {
 
       <div className="section-divider"></div>
 
-      {/* Feature Highlights */}
-      <section className="animate-fade-in-up stagger-3">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Advanced Capabilities</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Go beyond basic project management with enterprise-grade features.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { icon: "🧠", title: "AI Assistant", desc: "Smart project recommendations and insights" },
-            { icon: "📱", title: "Mobile Apps", desc: "Full-featured iOS and Android applications" },
-            { icon: "🔄", title: "API Access", desc: "Comprehensive REST API for custom integrations" },
-            { icon: "📈", title: "Custom Fields", desc: "Tailor projects to your specific workflow needs" },
-            { icon: "⏰", title: "Time Tracking", desc: "Automatic and manual time tracking with reporting" },
-            { icon: "💰", title: "Budget Management", desc: "Real-time budget tracking and cost analysis" },
-            { icon: "📋", title: "Templates", desc: "Pre-built templates for common project types" },
-            { icon: "🎨", title: "White Labeling", desc: "Customize the platform with your brand" }
-          ].map((feature, index) => (
-            <div key={index} className="pro-card p-6 text-center hover-lift animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
-              <div className="text-4xl mb-4 animate-float">{feature.icon}</div>
-              <h3 className="text-lg font-semibold gradient-text mb-3">{feature.title}</h3>
-              <p className="text-gray-300 text-sm">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="section-divider"></div>
-
       {/* Integrations */}
       <section className="animate-fade-in-up stagger-4">
         <div className="text-center mb-16">
@@ -146,61 +115,20 @@ export default function Features() {
             Connect with your favorite tools and streamline your workflow with 150+ integrations.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 max-w-6xl mx-auto">
           {integrations.map((integration, index) => (
-            <div key={index} className="pro-card p-6 text-center hover-scale animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
+            <div key={index} className="glass p-6 text-center hover-scale animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="text-3xl mb-3">{integration.logo}</div>
               <div className="text-sm text-gray-300">{integration.name}</div>
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-          <button className="btn-secondary px-8 py-3">
-            View All Integrations
-            <span className="ml-2">→</span>
+          <button className="gradient-bg text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold">
+            View All Integrations <span className="ml-2">→</span>
           </button>
-        </div>
-      </section>
-
-      <div className="section-divider"></div>
-
-      {/* CTA Section */}
-      <section className="text-center py-20 animate-fade-in-up stagger-5">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-            Experience the Future of Project Management
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            See how ProjectAccel's advanced features can transform your team's productivity and project success rate.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="btn-primary text-lg px-10 py-4 hover-glow">
-              Start Free Trial
-              <span className="ml-2">→</span>
-            </button>
-            <button className="btn-secondary text-lg px-10 py-4">
-              Schedule Demo
-              <span className="ml-2">📅</span>
-            </button>
-          </div>
-          
-          <div className="flex justify-center items-center gap-8 mt-8 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>14-day free trial</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>No setup fees</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-400">✓</span>
-              <span>Cancel anytime</span>
-            </div>
-          </div>
         </div>
       </section>
     </div>
