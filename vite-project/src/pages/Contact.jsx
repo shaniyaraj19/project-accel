@@ -2,62 +2,82 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="space-y-16 max-w-4xl mx-auto">
-      {/* Header */}
-      <section className="text-center animate-fade-in-up pt-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-snug bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent animate-float">Let's Talk!</h1>
-        <p className="text-xl text-gray-300">
-          Whether you have questions, need support, or want a demo — we’re here to help.
-        </p>
-      </section>
+    <div className="min-h-screen bg-black text-white px-6 py-16">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl md:text-8xl font-bold mb-6 ">Contact Us</h1>
+          <p className="text-gray-400 max-w-md mx-auto">
+             Whether you have questions, need support <br /> or want a demo — we're here to help.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          
+          {/* Left: Contact Form */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm mb-1 text-left">Name</label>
+                  <input
+                    type="text"
+                    className="w-full border-b border-gray-700 bg-transparent py-2 px-0 focus:outline-none focus:border-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-left">Email</label>
+                  <input
+                    type="email"
+                    className="w-full border-b border-gray-700 bg-transparent py-2 px-0 focus:outline-none focus:border-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-left">Message</label>
+                  <textarea
+                    className="w-full border-b border-gray-700 bg-transparent py-2 px-0 focus:outline-none focus:border-white resize-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                 className="w-full bg-transparent text-white border border-white py-3 mt-4 hover:bg-white hover:text-black transition-all duration-300"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
 
-      {/* Contact Info */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 animate-fade-in-up stagger-2">
-        <div className="glass p-8 rounded-xl hover-lift animate-fade-in-up stagger-1">
-          <div className="text-4xl mb-4 animate-float">📩</div>
-          <h2 className="text-xl font-semibold mb-3 gradient-text">Email</h2>
-          <p className="text-gray-300">support@projectaccel.com</p>
-        </div>
-        <div className="glass p-8 rounded-xl hover-lift animate-fade-in-up stagger-2">
-          <div className="text-4xl mb-4 animate-float">💬</div>
-          <h2 className="text-xl font-semibold mb-3 gradient-text">Chat with Us</h2>
-          <p className="text-gray-300">Live chat available Mon–Fri, 9am–6pm IST</p>
-        </div>
-        <div className="glass p-8 rounded-xl hover-lift animate-fade-in-up stagger-3">
-          <div className="text-4xl mb-4 animate-float">📞</div>
-          <h2 className="text-xl font-semibold mb-3 gradient-text">Phone</h2>
-          <p className="text-gray-300">+91 98765 43210</p>
-        </div>
-        <div className="glass p-8 rounded-xl hover-lift animate-fade-in-up stagger-4">
-          <div className="text-4xl mb-4 animate-float">📍</div>
-          <h2 className="text-xl font-semibold mb-3 gradient-text">Address</h2>
-          <p className="text-gray-300">#101, Startup Street, Bengaluru, India</p>
-        </div>
-      </section>
+          {/* Right: Aligned Bottom Info */}
+          <div className="flex flex-col justify-end space-y-10 text-gray-300">
+            {/* Info aligned with Send button */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-base font-semibold text-white mb-2">Visit us</h2>
+                <p>263 Homebush Road<br />Strathfield South 2136</p>
+              </div>
 
-      {/* Contact Form */}
-      <section className="glass p-8 rounded-xl animate-fade-in-up stagger-3">
-        <h2 className="text-2xl font-semibold mb-6 text-center gradient-text">Send Us a Message</h2>
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-2 text-gray-300">Name</label>
-            <input type="text" className="w-full bg-gray-800 border border-gray-600 px-4 py-3 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors" required />
+              <div>
+                <h2 className="text-base font-semibold text-white mb-2">Talk to us</h2>
+                <p>+91 98765 43210<br />support@projectaccel.com</p>
+              </div>
+
+              <div className="flex gap-6 text-white text-xl pt-4 justify-center md:justify-start">
+                <a href="#" aria-label="Twitter">
+                  <i className="fab fa-twitter" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <i className="fab fa-linkedin-in" />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <i className="fab fa-instagram" />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <i className="fab fa-youtube" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-2 text-gray-300">Email</label>
-            <input type="email" className="w-full bg-gray-800 border border-gray-600 px-4 py-3 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors" required />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2 text-gray-300">Message</label>
-            <textarea className="w-full bg-gray-800 border border-gray-600 px-4 py-3 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors min-h-[120px]" required></textarea>
-          </div>
-          <div className="text-center">
-            <button className="gradient-bg text-white px-8 py-3 rounded-lg border border-white/90 shadow-lg hover:shadow-xl transform hover:scale-105 hover:border-white hover:bg-white hover:text-black transition-all duration-300 font-semibold">
-              Submit
-            </button>
-          </div>
-        </form>
-      </section>
+        </div>
+      </div>
     </div>
   );
 }

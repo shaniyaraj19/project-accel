@@ -49,9 +49,12 @@ import Pricing from './pages/Pricing';
 import Blog from './pages/Blog';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import Security from './pages/Security';
+import Careers from './pages/Careers';
+import StartFreeTrial from './pages/StartFreeTrial';
+import ScheduleDemo from './pages/ScheduleDemo';
 // import NotFound from './pages/NotFound';
 
 function App() {
@@ -67,9 +70,12 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="terms" element={<Terms />} />
-          <Route path="security" element={<Security />} /> 
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<TermsOfService />} />
+          <Route path="security" element={<Security />} />
+          <Route path="careers" element={<Careers />} />
+          <Route path="start-free-trial" element={<StartFreeTrial />} />
+          <Route path="schedule-demo" element={<ScheduleDemo />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
