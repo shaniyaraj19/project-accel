@@ -127,7 +127,7 @@ function Navbar() {
         <div className="flex items-center space-x-6">
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-1 text-sm">
-            {/* <NavLink to="/" end className={navLinkClass}>Home</NavLink> */}
+            <NavLink to="/" end className={navLinkClass}>Home</NavLink>
             <NavLink to="/features" className={navLinkClass}>Features</NavLink>
             <NavLink to="/use-cases" className={navLinkClass}>Use Cases</NavLink>
             <NavLink to="/case-studies" className={navLinkClass}>Case Studies</NavLink>
@@ -165,7 +165,7 @@ function Navbar() {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4 py-4 space-y-2">
-            {/* <NavLink to="/" end className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Home</NavLink> */}
+            <NavLink to="/" end className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Home</NavLink>
             <NavLink to="/features" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Features</NavLink>
             <NavLink to="/use-cases" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Use Cases</NavLink>
             <NavLink to="/case-studies" className="block px-3 py-2 text-gray-300 hover:text-white rounded-lg transition-colors" onClick={toggleMobileMenu}>Case Studies</NavLink>
