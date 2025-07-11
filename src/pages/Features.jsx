@@ -11,6 +11,8 @@ import {
   MdCloud,
   MdMobileFriendly
 } from "react-icons/md";
+import ScrollReveal from '../components/ScrollReveal';
+import StaggerContainer, { StaggerItem } from '../components/StaggerContainer';
 
 const AnimatedSection = ({ children, className = "", delay = 0 }) => {
   return (
@@ -196,20 +198,10 @@ export default function Features() {
     { name: "Asana", logo: "✅", color: "bg-orange-500" },
     { name: "Notion", logo: "📝", color: "bg-gray-800" },
     { name: "Zoom", logo: "📹", color: "bg-blue-500" },
-    { name: "Dropbox", logo: "📦", color: "bg-blue-600" },
-    { name: "Salesforce", logo: "☁️", color: "bg-blue-500" }
-  ];
-
-  return (
-    <div className="relative bg-black text-white overflow-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 hero-bg opacity-30"></div>
-      
-      <div className="relative z-10 space-y-32">
-        {/* Enhanced Hero Section */}
-        <section className="min-h-screen flex items-center justify-center text-center px-4 pt-20">
+              direction="up"
+              className="relative bg-zinc-900 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-300 h-[400px] flex flex-col justify-end hover-glow group"
           <div className="max-w-6xl mx-auto">
-            <motion.div
+            <StaggerItem
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
@@ -297,44 +289,42 @@ export default function Features() {
           >
             <button className="btn-primary text-xl px-12 py-5 hover-lift">
               View All Integrations
-            </button>
+            </StaggerItem>
           </motion.div>
-        </AnimatedSection>
+        </StaggerContainer>
 
         {/* Enhanced CTA Section */}
-        <AnimatedSection className="py-32">
-          <div className="max-w-4xl mx-auto text-center px-6">
-            <div className="pro-card p-16 hover-glow">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text-hero">
-                Ready to Transform Your Workflow?
-              </h2>
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                Join thousands of teams who've revolutionized their project delivery with our advanced features.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
-                <motion.button 
-                  className="btn-primary text-xl px-12 py-5 hover-lift"
+      {/* Integrations Section */}
+      <section className="py-20">
+        <ScrollReveal direction="up" delay={0.2}>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Seamless Integrations</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with your favorite tools and streamline your workflow with 150+ integrations.
+            </p>
+          </div>
+        </ScrollReveal>
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
                 >
-                  Start Free Trial
+            <StaggerItem
                 </motion.button>
-                <motion.button 
-                  className="btn-secondary text-xl px-12 py-5 hover-lift"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+              direction="scale"
+              className="glass p-6 text-center hover-glow hover:scale-105 transition-all duration-300"
                   Schedule Demo
-                </motion.button>
+              <motion.div 
+                className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-1 text-lg mx-auto"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+                transition={{ duration: 0.3 }}
+              >
               </div>
-              
+              </motion.div>
               <p className="text-gray-500 mt-8 text-lg">
                 No credit card required • 14-day free trial • Cancel anytime
               </p>
-            </div>
+            </StaggerItem>
           </div>
-        </AnimatedSection>
+        </StaggerContainer>
       </div>
     </div>
   );
