@@ -197,9 +197,13 @@ export default function Features() {
     { name: "Trello", logo: "📋", color: "bg-blue-400" },
     { name: "Asana", logo: "✅", color: "bg-orange-500" },
     { name: "Notion", logo: "📝", color: "bg-gray-800" },
-    { name: "Zoom", logo: "📹", color: "bg-blue-500" },
-              direction="up"
-              className="relative bg-zinc-900 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition-all duration-300 h-[400px] flex flex-col justify-end hover-glow group"
+    { name: "Zoom", logo: "📹", color: "bg-blue-500" }
+  ];
+
+  return (
+    <div>
+      <section className="py-20">
+        <StaggerContainer>
           <div className="max-w-6xl mx-auto">
             <StaggerItem
               initial={{ opacity: 0, scale: 0.9 }}
@@ -223,9 +227,9 @@ export default function Features() {
               >
                 Feature-rich, AI-powered, and built to help you simplify projects, reduce delays, and scale efficiently.
               </motion.p>
-            </motion.div>
+            </StaggerItem>
           </div>
-        </section>
+        </StaggerContainer>
 
         {/* Enhanced Core Capabilities */}
         <section className="py-20">
@@ -289,43 +293,10 @@ export default function Features() {
           >
             <button className="btn-primary text-xl px-12 py-5 hover-lift">
               View All Integrations
-            </StaggerItem>
+            </button>
           </motion.div>
-        </StaggerContainer>
-
-        {/* Enhanced CTA Section */}
-      {/* Integrations Section */}
-      <section className="py-20">
-        <ScrollReveal direction="up" delay={0.2}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">Seamless Integrations</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and streamline your workflow with 150+ integrations.
-            </p>
-          </div>
-        </ScrollReveal>
-                  whileHover={{ scale: 1.05 }}
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-                >
-            <StaggerItem
-                </motion.button>
-              direction="scale"
-              className="glass p-6 text-center hover-glow hover:scale-105 transition-all duration-300"
-                  Schedule Demo
-              <motion.div 
-                className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-1 text-lg mx-auto"
-                whileHover={{ scale: 1.2, rotate: 360 }}
-                transition={{ duration: 0.3 }}
-              >
-              </div>
-              </motion.div>
-              <p className="text-gray-500 mt-8 text-lg">
-                No credit card required • 14-day free trial • Cancel anytime
-              </p>
-            </StaggerItem>
-          </div>
-        </StaggerContainer>
-      </div>
+        </AnimatedSection>
+      </section>
     </div>
   );
 }
