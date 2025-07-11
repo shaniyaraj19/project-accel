@@ -9,6 +9,7 @@
 +import PageTransition from './PageTransition';
 
  function Layout() {
+ }
 +  const location = useLocation();
 +
    return (
@@ -30,3 +31,4 @@
  }
 
  export default Layout;
+   )
